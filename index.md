@@ -6,7 +6,8 @@ Berikut ini adalah koleksi yang dimiliki:
 ## Koleksi
 
 1. [Pengantar Psikologi](ebook/Buku Pengantar Psikologi.pdf) - Adnan Achiruddin Saleh (2018)
-2. Contoh buku lain
+2. [Bongkar Rahasia Pemrograman](ebook/Buku Bongkar Rahasia Pemrograman.pdf) - Yusup Indra Wijaya (2024)
+3. Contoh buku lain
 
 ---
 
