@@ -13,7 +13,7 @@ Berikut ini adalah koleksi yang dimiliki:
 6. [Psikologi Kepribadian Islam](ebook/Buku Buku Psikologi Kepribadian Islam.pdf) - Bambang Samsul Arifin (2018)
 7. [Psikologi Perkembangan Dewasa Muda](ebook/Buku Psikologi Perkembangan Dewasa Muda.pdf) - Agoes Dariyo (2004)
 8. [Tenggelamnya Kapal van der Wijck](ebook/Buku Tenggelamnya Kapal van der Wijck.pdf) - Hamka (1984)
-9. [Manajemen Farmasi] (ebook/Buku Manajemen Farmasi.pdf) - Gemy Nastity Handayany (2022)
+9. [Manajemen Farmasi](ebook/Buku Manajemen Farmasi.pdf) - Gemy Nastity Handayany (2022)
 10. [Royan Revolusi](ebook/Buku Royan Revolusi.pdf) - Ramadhan Karta Hadimadja (1986)
     
 ---
