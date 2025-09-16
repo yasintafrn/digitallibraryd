@@ -19,6 +19,6 @@ Berikut ini adalah koleksi yang dimiliki:
 12. [halaman1](webti/halaman1.html)
     
 ---
-<a href="webti/halaman1.html">Halaman 1</a>|<a href="webti/halaman2.html">Halaman 1</a>|
+<a href="webti/halaman1.html">Halaman 1</a>|<a href="webti/halaman2.html">Halaman 2</a>|
 
 *Powered by GitHub Pages*
