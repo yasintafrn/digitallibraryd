@@ -63,7 +63,6 @@
     </style>
 </head>
 <body>
-
     <!-- Navigasi di atas -->
     <nav>
         <a href="halaman1.html">Halaman 1</a> | 
@@ -74,50 +73,5 @@
         <a href="halaman6.html">Halaman 6</a> | 
         <a href="halaman7.html">Halaman 7</a>
     </nav>
-
-    <h2>Selamat Datang di Halaman Chatbot</h2>
-
-    <!-- Chatbot -->
-    <div class="chat-container">
-        <div class="chat-box" id="chat-box"></div>
-        <div class="chat-input">
-            <input type="text" id="user-input" placeholder="Type a message...">
-            <button onclick="sendMessage()">Send</button>
-        </div>
-    </div>
-
-    <script>
-        function sendMessage() {
-            const chatBox = document.getElementById("chat-box");
-            const userInput = document.getElementById("user-input");
-            const message = userInput.value.trim();
-
-            if (message === "") return;
-
-            const userMessage = document.createElement("div");
-            userMessage.textContent = "You: " + message;
-            chatBox.appendChild(userMessage);
-
-            setTimeout(() => {
-                const botMessage = document.createElement("div");
-                botMessage.textContent = "Bot: " + getBotResponse(message);
-                chatBox.appendChild(botMessage);
-                chatBox.scrollTop = chatBox.scrollHeight;
-            }, 1000);
-
-            userInput.value = "";
-            chatBox.scrollTop = chatBox.scrollHeight;
-        }
-
-        function getBotResponse(input) {
-            const responses = {
-                "hai": "Hai juga!",
-                "bagaimana kabarmu?": "aku baik-baik saja",
-                "siapa namamu?": "aku chatbot",
-                "siapa orang paling cantik di dunia?": "kamu ^^"
-            };
-            return responses[input.toLowerCase()] || "Maaf saya tidak tau";
-        }
-    </script>
 </body>
 </html>
