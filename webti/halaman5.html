@@ -11,37 +11,96 @@
         <a href="halaman7.html">Halaman 7</a>
     </nav>
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Konversi Angka ke Pembilang</title>
-    <script>
-        function numberToWords(n) {
-            const satuan = ["", "Satu", "Dua", "Tiga", "Empat", "Lima", "Enam", "Tujuh", "Delapan", "Sembilan", "Sepuluh", "Sebelas"];
-            
-            if (n < 12) return satuan[n];
-            if (n < 20) return numberToWords(n - 10) + " Belas";
-            if (n < 100) return numberToWords(Math.floor(n / 10)) + " Puluh " + numberToWords(n % 10);
-            if (n < 200) return "Seratus " + numberToWords(n - 100);
-            if (n < 1000) return numberToWords(Math.floor(n / 100)) + " Ratus " + numberToWords(n % 100);
-            if (n < 2000) return "Seribu " + numberToWords(n - 1000);
-            if (n < 1000000) return numberToWords(Math.floor(n / 1000)) + " Ribu " + numberToWords(n % 1000);
-            if (n < 1000000000) return numberToWords(Math.floor(n / 1000000)) + " Juta " + numberToWords(n % 1000000);
-            return "Angka terlalu besar";
+    <title>Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
         }
-
-        function convertNumber() {
-            let number = document.getElementById("numberInput").value;
-            let words = numberToWords(parseInt(number));
-            document.getElementById("result").innerText = words;
+        .chat-container {
+            width: 300px;
+            height: 400px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
         }
-    </script>
+        .chat-box {
+            flex: 1;
+            padding: 10px;
+            overflow-y: auto;
+        }
+        .chat-input {
+            display: flex;
+            border-top: 1px solid #ddd;
+        }
+        .chat-input input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            outline: none;
+        }
+        .chat-input button {
+            padding: 10px;
+            border: none;
+            background: blue;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <h2>Konversi Angka ke Pembilang</h2>
-    <label for="numberInput">Masukkan Angka:</label>
-    <input type="number" id="numberInput" oninput="convertNumber()">
-    <p>Hasil: <span id="result"></span></p>
+    <div class="chat-container">
+        <div class="chat-box" id="chat-box"></div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Type a message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        function sendMessage() {
+            const chatBox = document.getElementById("chat-box");
+            const userInput = document.getElementById("user-input");
+            const message = userInput.value.trim();
+
+            if (message === "") return;
+
+            // Add user message
+            const userMessage = document.createElement("div");
+            userMessage.textContent = "You: " + message;
+            chatBox.appendChild(userMessage);
+
+            // Simulate bot response
+            setTimeout(() => {
+                const botMessage = document.createElement("div");
+                botMessage.textContent = "Bot: " + getBotResponse(message);
+                chatBox.appendChild(botMessage);
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }, 1000);
+
+            userInput.value = "";
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        function getBotResponse(input) {
+            const responses = {
+                "hai": "Hai juga!",
+                "bagaimana kabarmu?": "aku baik-baik saja",
+                "siapa namamu?": "aku chat boot"
+            };
+            return responses[input.toLowerCase()] || "Maaf saya tidak tau";
+        }
+    </script>
 </body>
 </html>
