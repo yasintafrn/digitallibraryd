@@ -16,7 +16,7 @@ Berikut ini adalah koleksi yang dimiliki:
 9. [Manajemen Farmasi](ebook/Buku Manajemen Farmasi.pdf) - Gemy Nastity Handayany (2022)
 10. [Royan Revolusi](ebook/Buku Royan Revolusi.pdf) - Ramadhan Karta Hadimadja (1986)
 11. [Ringkasan Materi VR](ebook/Ringkasan Kuliah Tamu Materi VR.pdf) - Yasinta Fairani (2025)
-12. [halaman1](html/halaman1.html) 
+12. [halaman1](ebook/halaman1.html) - Yasinta Fairani (2025)
     
 ---
 
