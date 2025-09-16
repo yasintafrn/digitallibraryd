@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,15 +7,30 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav {
+            background: #eee;
+            padding: 10px;
+        }
+        nav a {
+            margin: 0 8px;
+            text-decoration: none;
+            color: blue;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        h2 {
+            margin: 20px 0;
         }
         .chat-container {
             width: 300px;
             height: 400px;
+            margin: auto;
             background: white;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -48,9 +63,8 @@
     </style>
 </head>
 <body>
-    </head>
-<body>
-  <!-- Navigasi di atas -->
+
+    <!-- Navigasi di atas -->
     <nav>
         <a href="halaman1.html">Halaman 1</a> | 
         <a href="halaman2.html">Halaman 2</a> | 
@@ -60,6 +74,7 @@
         <a href="halaman6.html">Halaman 6</a> | 
         <a href="halaman7.html">Halaman 7</a>
     </nav>
+
     <!-- Chatbot -->
     <div class="chat-container">
         <div class="chat-box" id="chat-box"></div>
@@ -77,12 +92,10 @@
 
             if (message === "") return;
 
-            // Add user message
             const userMessage = document.createElement("div");
             userMessage.textContent = "You: " + message;
             chatBox.appendChild(userMessage);
 
-            // Simulate bot response
             setTimeout(() => {
                 const botMessage = document.createElement("div");
                 botMessage.textContent = "Bot: " + getBotResponse(message);
@@ -98,7 +111,8 @@
             const responses = {
                 "hai": "Hai juga!",
                 "bagaimana kabarmu?": "aku baik-baik saja",
-                "siapa namamu?": "aku chat boot"
+                "siapa namamu?": "aku chatbot",
+                "siapa orang paling cantik di dunia?": "kamu ^^"
             };
             return responses[input.toLowerCase()] || "Maaf saya tidak tau";
         }
